@@ -8,6 +8,7 @@ import SignUp from './pages/SignUp'
 import Dashboard from './pages/Dashboard'
 import Projects from './pages/Projects'
 import Header from './components/Header'
+import FooterCom from './components/Footer.jsx'
 const App = () => {
   return (
     <BrowserRouter>
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/dashboard" element={<Dashboard />}/>
         <Route path="/projects" element={<Projects />}/>
       </Routes>
+      <FooterCom/>
     </BrowserRouter>
   )
 }
