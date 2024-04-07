@@ -17,10 +17,10 @@ const Dashboard = () => {
     <div className='min-h-screen flex flex-col md:flex-row'>
       <div>
           {/*Sidebar for my ref*/}
-          <DashSidebar className=""/>
+          <DashSidebar className="md:w-56"/>
       </div>
           {/*profile... */}
-          {tab==="profile" && <div><DashProfile /></div>}
+          {tab==="profile" && <DashProfile />}
     </div>
   )
 }
