@@ -119,7 +119,7 @@ export default function CreatePost() {
             className='bg-gradient-to-r from-gray-500 via-gray-700 to-gray-800' 
             size='sm'
             outline
-            onClick={handleUpdloadImage}
+            onClick={handleUpdloadImage} 
             disabled={imageUploadProgress}
           >
            {imageUploadProgress ? (

@@ -1,5 +1,5 @@
 import Post from '../models/post.model.js';
-import { errorHandler } from '../utils/error.js';
+import  errorHandler  from '../utils/error.js';
 
 export const create = async (req, res, next) => {
   if (!req.user.isAdmin) {
@@ -20,7 +20,7 @@ export const create = async (req, res, next) => {
   });
   try {
     const savedPost = await newPost.save();
-    res.status(201).json(savedPost);
+    res.status(201).json(savedPost); 
   } catch (error) {
     next(error);
   }
