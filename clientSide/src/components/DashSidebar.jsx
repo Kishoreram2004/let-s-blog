@@ -51,7 +51,7 @@ export const DashSidebar = () => {
                           icon={HiDocumentText}
                           as='div'
                         >
-                          Posts
+                          My Posts
                         </Sidebar.Item>
                       </Link>
                     )}  
