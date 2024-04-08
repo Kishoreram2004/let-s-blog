@@ -7,9 +7,10 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { updateSuccess, updateStart, updateFailure, deleteUserStart, deleteUserSuccess,deleteUserFailure, signoutSuccess } from '../redux/user/userSlice'
 import {HiOutlineExclamationCircle} from "react-icons/hi"
+import { Link } from 'react-router-dom';
 
 export const DashProfile = () => {
-  const {currentUser, error} = useSelector(state=>state.user)
+  const {currentUser,error} = useSelector(state=>state.user)
   const [imageFile, setImageFile] =useState(null);
   const [imageFileUrl, setImageFileUrl] = useState(null);
   const filePickerRef= useRef()
@@ -21,6 +22,10 @@ export const DashProfile = () => {
   const [updateUserSuccess,setUpdateUserSuccess]= useState(null)
   const [updateUserError, setUpdateUserError] = useState(null)
   const [showModal,setShowModal] = useState(false)
+  const { loading } = useSelector((state) => state.user);
+
+
+
   const handleImageChange=(e)=>{
     const file=e.target.files[0];
     if(file){
@@ -193,7 +198,25 @@ export const DashProfile = () => {
                <TextInput type="text" id="username" placeholder='username' defaultValue={currentUser.username} onChange={handleChange}/>
                <TextInput type="email" id="email" placeholder='email' defaultValue={currentUser.email} onChange={handleChange}/>
                <TextInput type="password" id="password" placeholder='password' onChange={handleChange}/>
-               <Button type="submit" className="bg-gradient-to-r from-gray-400 to-gray-700" outline>Update</Button>
+              <Button
+                    type='submit'
+                    className='bg-gradient-to-r from-gray-500 via-gray-700 to-gray-800' 
+                    outline
+                    disabled={loading || imageFileUploading}
+                  >
+                    {loading ? 'Loading...' : 'Update'}
+                  </Button>
+                  {currentUser.isAdmin && (
+                    <Link to={'/create-post'}>
+                      <Button
+                        type='button'
+                        className='w-full bg-gradient-to-r from-gray-500 via-gray-700 to-gray-800' 
+                        
+                      >
+                        Create a post
+                    </Button>
+                  </Link>
+        )}
         </form>
         <div className='text-red-500 flex justify-between mt-5'>
                     <span onClick={()=>{setShowModal(true)}} className='cursor-pointer'>Delete Account</span>
