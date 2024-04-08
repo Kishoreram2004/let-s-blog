@@ -135,7 +135,7 @@ export default function UpdatePost() {
             <option value='nextjs'>Next.js</option>
           </Select>
         </div>
-        <div className='flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3'>
+        <div className='flex gap-4 items-center justify-between border-4 border-gray-500 border-dotted p-3'>
           <FileInput
             type='file'
             accept='image/*'
@@ -143,7 +143,7 @@ export default function UpdatePost() {
           />
           <Button
             type='button'
-            gradientDuoTone='purpleToBlue'
+            className='bg-gradient-to-r from-gray-500 via-gray-700 to-gray-800'
             size='sm'
             outline
             onClick={handleUpdloadImage}
@@ -179,7 +179,7 @@ export default function UpdatePost() {
             setFormData({ ...formData, content: value });
           }}
         />
-        <Button type='submit' gradientDuoTone='purpleToPink'>
+        <Button type='submit' className='bg-gradient-to-r from-gray-500 via-gray-700 to-gray-800'>
           Update post
         </Button>
         {publishError && (
