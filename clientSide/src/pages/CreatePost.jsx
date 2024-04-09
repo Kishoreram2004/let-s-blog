@@ -104,6 +104,7 @@ export default function CreatePost() {
           >
             <option value='uncategorized'>Select a category</option>
             <option value='Technology'>Technology</option>
+            <option value='Food and Recipes'>Food and Recipes</option>
             <option value='Travel'>Travel</option>
             <option value='Lifestyle'>Lifestyle</option>
             <option value='Arts and Culture'>Arts and Culture</option>
