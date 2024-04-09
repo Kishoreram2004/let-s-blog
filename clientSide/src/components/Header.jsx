@@ -50,7 +50,7 @@ const Header = () => {
     navigate(`/search?${searchQuery}`);
   };
   return (
-    <Navbar className='border-b-2'>
+    <Navbar className='border-b-2 '>
         <Link to="/" className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>
           <span className='px-2 py-1 bg-gradient-to-r from-gray-500 via-gray-700 to-gray-800 text-white rounded-lg ' >Let's</span>
           Blog
@@ -65,11 +65,11 @@ const Header = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
           />
         </form>
-        <Button className='w-12 h-10 lg:hidden' color="gray" pill>
+        <Button className='w-12 h-10 lg:hidden sm:inline' color="gray" pill>
           <AiOutlineSearch />
         </Button>
         <div className='flex gap-2 md:order-2'>
-        <Button className='w-12 h-10 hidden sm:inline' color="gray" pill onClick={()=> dispatch(toggleTheme())}>
+        <Button className='w-12 h-10  sm:inline' color="gray" pill onClick={()=> dispatch(toggleTheme())}>
           {theme==="light"? <FaMoon />:<FaSun />}
         </Button>
         
