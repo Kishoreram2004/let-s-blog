@@ -18,13 +18,13 @@ export default function Home() {
   return (
     <div>
       <div className='flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto '>
-        <h1 className='text-3xl font-bold lg:text-6xl'>Welcome to my Blog</h1>
-        <h4 className='text-gray-500 text-xs sm:text-sm'>
+        <h1 className='text-4xl font-bold lg:text-5xl'>Welcome to my Blog</h1>
+        <h4 className='text-gray-700 text-lg dark:text-gray-100 '>
         "Welcome to Let's Blog ! Dive into a world of inspiration and discovery. Explore captivating stories, thought-provoking articles, and engaging discussions. Join our community and ignite your passion for knowledge."
         </h4>
         <Link 
           to='/search'
-          className='text-xs sm:text-sm text-gray-800 font-bold hover:underline'
+          className='text-xl  text-gray-800 dark:text-gray-50 font-bold hover:underline'
         >
           View all posts
         </Link>
