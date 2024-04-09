@@ -32,7 +32,7 @@ const SignUp = () => {
       }
       setLoading(false)
       if (res.ok){
-        navigate("/")
+        navigate("/sign-in")
       }
     }catch(error){
       setErrorMessage(error.message);
